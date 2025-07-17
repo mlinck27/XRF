@@ -3,5 +3,5 @@ ggplot() +
     geom_line(data = df1, aes(x = depth_cm_1, y = element), color = "red") +
     geom_line(data = df2, aes(x = depth_cm_1, y = element), color = "green") +
     geom_line(data = df4, aes(x = depth_cm_1, y = element), color = "purple") +
-    coord_flip() + scale_x_reverse()
+    coord_flip() + scale_x_reverse() +
 labs(title = "Element Concentration vs Depth",x = "element", y = "Depth (cm)") + theme_minimal()
