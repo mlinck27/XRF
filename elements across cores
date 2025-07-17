@@ -1,0 +1,6 @@
+ggplot() + 
+    geom_line(data = df, aes(x = depth_cm_1, y = element), color = "blue") +
+    geom_line(data = df1, aes(x = depth_cm_1, y = element), color = "red") +
+    geom_line(data = df2, aes(x = depth_cm_1, y = element), color = "green") +
+    geom_line(data = df4, aes(x = depth_cm_1, y = element), color = "purple") +
+    coord_flip() + scale_x_reverse()
