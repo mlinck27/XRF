@@ -1,7 +1,17 @@
-ggplot() + 
-    geom_line(data = df, aes(x = depth_cm_1, y = element), color = "blue") +
-    geom_line(data = df1, aes(x = depth_cm_1, y = element), color = "red") +
-    geom_line(data = df2, aes(x = depth_cm_1, y = element), color = "green") +
-    geom_line(data = df4, aes(x = depth_cm_1, y = element), color = "purple") +
-    coord_flip() + scale_x_reverse() +
-labs(title = "Element Concentration vs Depth",x = "element", y = "Depth (cm)") + theme_minimal()
+ggplot(LC_XRF_R, aes(x = depth_cm_1, y = element, color = ID)) +
+    geom_line() +
+    coord_flip() +
+    scale_x_reverse() +
+    scale_color_manual(
+        name = "LC Cores",
+        values = c(
+            "LC11" = "blue",
+            "LC13" = "green",
+            "LC15" = "purple",
+            "LC16" = "orange",
+            "LC19" = "red")) +
+    labs(
+        title = "element Concentration vs Depth",
+        x = "Depth (cm)",
+        y = "element Concentration") +
+    theme_minimal()
