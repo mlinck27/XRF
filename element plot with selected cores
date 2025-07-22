@@ -1,0 +1,13 @@
+ggplot(LC_XRF_R[LC_XRF_R$ID %in% c("LC15", "LC19"), ], 
+       aes(x = depth_cm_1, y = element, color = ID)) +
+    geom_line() +
+    coord_flip() +
+    scale_x_reverse() +
+    scale_color_manual(
+        name = "LC Cores",
+        values = c("LC15" = "purple", "LC19" = "red")) +
+    labs(
+        title = "element Concentration vs Depth",
+        x = "Depth (cm)",
+        y = "Element Concentration") +
+    theme_minimal()
