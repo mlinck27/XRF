@@ -1,0 +1,17 @@
+ggplot(data= filter(LC_Comparison, ID %in% c("LC16", "LC19")), aes(x = depth_cm_1, y = Fe_Mn_ICP, color = ID)) +
+    geom_line() +
+    coord_flip() +
+    scale_x_reverse() +
+    scale_color_manual(
+        name = "LC Cores",
+        values = c(
+            "LC11" = "paleturquoise2",
+            "LC13" = "darkseagreen3",
+            "LC15" = "tan3",
+            "LC16" = "darkgoldenrod1",
+            "LC19" = "coral")) +
+    labs(
+        title = "Fe:Mn ICP vs Depth",
+        x = "Depth (cm)",
+        y = "Fe:Mn") +
+    theme_minimal()
