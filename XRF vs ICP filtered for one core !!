@@ -1,0 +1,11 @@
+ggplot() +
+    geom_line(data = filter(LC_Comparison, ID == "LC16"), aes(x = depth_cm_1, y = Ca_Sr_ICP, color = "ICP")) +
+    geom_line(data = filter(LC_XRF_R, ID == "LC16"), aes(x = depth_cm_1, y = Ca_Sr, color = "XRF")) +
+    scale_color_manual(values = c("XRF" = "darkseagreen3", "ICP" = "coral")) +
+    scale_x_reverse() +
+    coord_flip() +
+    labs(title = "LC16 Ca:Sr XRF vs ICP",
+         x = "Depth (cm)",
+         y = "Ca:Sr",
+         color = "Method") +
+    theme_minimal()
