@@ -7,9 +7,9 @@ ggplot(LC_XRF_R, aes(x = depth_cm_1, y = element, color = ID)) +
         values = c(
             "LC11" = "paleturquoise2",
             "LC13" = "darkseagreen3",
-            "LC15" = "tan4",
+            "LC15" = "tan3",
             "LC16" = "darkgoldenrod1",
-            "LC19" = "coral3")) +
+            "LC19" = "coral")) +
     labs(
         title = "element Concentration vs Depth",
         x = "Depth (cm)",
